@@ -16,7 +16,11 @@ public class GroupByQues {
         );
 
 //        Map<Integer, List<Employee>> collect = employeeList.stream().collect(Collectors.groupingBy(Employee::age));
+
+//        Employee with no duplicate
 //        Map<Integer, Set<Employee>> collect = employeeList.stream().collect(Collectors.groupingBy(Employee::age,Collectors.toSet()));
+
+//        Employee with no duplicate in sorted order
         Map<Integer, Set<Employee>> collect = employeeList.stream().collect(Collectors.groupingBy(Employee::age, TreeMap::new, Collectors.toSet()));
         System.out.println(collect);
 
